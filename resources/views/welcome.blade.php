@@ -30,13 +30,14 @@
     gap:20px
 }">
 
-    <p>Keywords not specified!</p>
+    <h1 style="text-align: center">Keywords not specified!</h1>
         <br>
     <a href="https://present-moment.com.hr/?keywords=phone&price_min=2&price_max=14&sorting=by_price_asc"
     style="
     padding: 12px;
-    background: rgba(0,0,255,0.29);
+    background: rgba(0,0,255,0.65);
     border-radius: 12px;
+    color: white;
     text-align: center;
 }"
     >Test link</a>
