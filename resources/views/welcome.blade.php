@@ -20,11 +20,26 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body class="antialiased"
+    style="display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 150px;
+    gap:20px
+}">
 
-        Keywords not specified!
-
-    <a href="https://present-moment.com.hr/?keywords=phone&price_min=2&price_max=14&sorting=by_price_asc">Test link</a>
+    <p>Keywords not specified!</p>
+        <br>
+    <a href="https://present-moment.com.hr/?keywords=phone&price_min=2&price_max=14&sorting=by_price_asc"
+    style="
+    padding: 12px;
+    background: rgba(0,0,255,0.29);
+    border-radius: 12px;
+    text-align: center;
+}"
+    >Test link</a>
 
     </body>
 </html>
