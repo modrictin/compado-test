@@ -16,12 +16,18 @@ class testController extends Controller
 {
     public function index(IApiAdapterFactory $factoryMethod2)
     {
+        #Just another method of creating the adapter using the Dependancy Injection
+        $shopApiAdapter1 = ApiProviderFactory::make(ApiProviderAdapterFactory::PROVIDER_EBAY);
 
-        //$apiAdapter = ApiProviderFactory::make(ApiProviderAdapterFactory::PROVIDER_EBAY);
-        $apiAdapter = $factoryMethod2->make(ApiProviderAdapterFactory::PROVIDER_EBAY);
+        #Creating using Facade
+        $shopApiAdapter2 = $factoryMethod2->make(ApiProviderAdapterFactory::PROVIDER_EBAY);
+        $sorting = IApiAdapter::SORT_DEFAULT;
+        if(request('sorting') == 'by_price_asc')
+            $sorting = IApiAdapter::SORT_PRICE_ASC;
 
-        $apiAdapter->getKeywordItems('harry');
+       $items =  $shopApiAdapter2->getKeywordItems(request('keywords'),request('price_min'),request('price_max'),$sorting);
 
-        return view('welcome');
+       dd($items);
+
     }
 }

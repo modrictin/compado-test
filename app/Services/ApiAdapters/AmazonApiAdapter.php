@@ -7,7 +7,7 @@ class AmazonApiAdapter implements IApiAdapter
     public function __construct($config)
     {
     }
-    public function getKeywordItems($keyword): array
+    public function getKeywordItems($keyword,$priceMin=false,$priceMax=false,$sorting=IApiAdapter::SORT_DEFAULT): array
     {
 
     }
