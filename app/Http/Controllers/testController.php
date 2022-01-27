@@ -19,6 +19,10 @@ class testController extends Controller
         #Just another method of creating the adapter using the Dependancy Injection
         $shopApiAdapter1 = ApiProviderFactory::make(ApiProviderAdapterFactory::PROVIDER_EBAY);
 
+        if(empty(request('keywords'))){
+            return view('welcome');
+        }
+
         #Creating using Facade
         $shopApiAdapter2 = $factoryMethod2->make(ApiProviderAdapterFactory::PROVIDER_EBAY);
         $sorting = IApiAdapter::SORT_DEFAULT;
